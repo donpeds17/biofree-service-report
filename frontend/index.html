@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bio-Free Service Report</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>BIO-FREE PEST CONTROL SERVICES</h1>
+        <p>Service Report Management System</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h2>Create Service Report</h2>
+
+            <form id="serviceForm">
+
+                <!-- SERVICE SELECTION -->
+
+                <h3>1. Select Service Type</h3>
+
+                <div class="service-options">
+
+                    <button
+                        type="button"
+                        class="service-button"
+                        data-service="Exhaust Cleaning"
+                        id="exhaustButton">
+
+                        Exhaust Cleaning
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="service-button"
+                        data-service="General Cleaning"
+                        id="generalButton">
+
+                        General Cleaning
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="service-button"
+                        data-service="Aircon Services"
+                        id="airconButton">
+
+                        Aircon Services
+
+                    </button>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="serviceType"
+                    name="serviceType"
+                    required
+                >
+
+                <p id="serviceMessage">
+                    Please select a service type.
+                </p>
+
+                <hr>
+
+                <!-- BASIC INFORMATION -->
+
+                <h3>2. Basic Information</h3>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>Report Date</label>
+                        <input
+                            type="date"
+                            id="reportDate"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Branch</label>
+                        <input
+                            type="text"
+                            id="branch"
+                            placeholder="Enter branch"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Technician</label>
+                        <input
+                            type="text"
+                            id="technician"
+                            placeholder="Technician name"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Client Name</label>
+                        <input
+                            type="text"
+                            id="clientName"
+                            placeholder="Client name"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Contact Number</label>
+                        <input
+                            type="text"
+                            id="contactNumber"
+                            placeholder="Contact number"
+                        >
+                    </div>
+
+                    <div>
+                        <label>Service Address</label>
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Service location"
+                        >
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- EXHAUST CLEANING -->
+
+                <section id="exhaustSection" class="service-section hidden">
+
+                    <h3>3. Exhaust Cleaning Checklist</h3>
+
+                    <p>Select the components inspected or serviced.</p>
+
+                    <div class="checklist">
+
+                        <label>
+                            <input type="checkbox" name="component" value="Kitchen Exhaust Blower">
+                            Kitchen Exhaust Blower
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Kitchen Hood">
+                            Kitchen Hood
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Grease Filters">
+                            Grease Filters
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Goose Neck">
+                            Goose Neck
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Exhaust Fan">
+                            Exhaust Fan
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Duct Mouth">
+                            Duct Mouth
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Vertical Ductwork">
+                            Vertical Ductwork
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Horizontal Ductwork">
+                            Horizontal Ductwork
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Grease Trap">
+                            Grease Trap
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Manhole / Handhole">
+                            Manhole / Handhole
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Drain Pan">
+                            Drain Pan
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="component" value="Fan Belt">
+                            Fan Belt
+                        </label>
+
+                    </div>
+
+                    <label>Grease Accumulation Level</label>
+
+                    <select id="greaseLevel">
+                        <option value="">Select level</option>
+                        <option value="Low">Low</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="High">High</option>
+                    </select>
+
+                </section>
+
+                <!-- GENERAL CLEANING -->
+
+                <section id="generalSection" class="service-section hidden">
+
+                    <h3>3. General Cleaning Checklist</h3>
+
+                    <label>Cleaning Type</label>
+
+                    <select id="cleaningType">
+
+                        <option value="">Select cleaning type</option>
+                        <option value="Home Cleaning">Home Cleaning</option>
+                        <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+                        <option value="Move In / Move Out">Move In / Move Out</option>
+                        <option value="Sofa Cleaning">Sofa Cleaning</option>
+                        <option value="Office Cleaning">Office Cleaning</option>
+                        <option value="Carpet Cleaning">Carpet Cleaning</option>
+
+                    </select>
+
+                    <p>Areas Covered</p>
+
+                    <div class="checklist">
+
+                        <label>
+                            <input type="checkbox" name="area" value="Living Room">
+                            Living Room
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Bedrooms">
+                            Bedrooms
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Kitchen">
+                            Kitchen
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Bathrooms">
+                            Bathrooms
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Windows">
+                            Windows
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Sofa">
+                            Sofa
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Carpets">
+                            Carpets
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Office Desks">
+                            Office Desks
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="area" value="Floor">
+                            Floor
+                        </label>
+
+                    </div>
+
+                </section>
+
+                <!-- AIRCON SERVICES -->
+
+                <section id="airconSection" class="service-section hidden">
+
+                    <h3>3. Aircon Services</h3>
+
+                    <label>Aircon Type</label>
+
+                    <select id="airconType">
+
+                        <option value="">Select aircon type</option>
+                        <option value="Window Type">Window Type</option>
+                        <option value="Split Type">Split Type</option>
+                        <option value="Cassette Type">Cassette Type</option>
+                        <option value="Floor Mounted">Floor Mounted</option>
+                        <option value="Centralized">Centralized</option>
+
+                    </select>
+
+                    <label>Service Performed</label>
+
+                    <select id="airconService">
+
+                        <option value="">Select service</option>
+                        <option value="General Cleaning">General Cleaning</option>
+                        <option value="Chemical Cleaning">Chemical Cleaning</option>
+                        <option value="Preventive Maintenance">Preventive Maintenance</option>
+                        <option value="Troubleshooting">Troubleshooting</option>
+                        <option value="Inspection">Inspection</option>
+
+                    </select>
+
+                    <label>Number of Units</label>
+
+                    <input
+                        type="number"
+                        id="airconUnits"
+                        min="1"
+                        placeholder="Enter number of units"
+                    >
+
+                </section>
+
+                <hr>
+
+                <!-- WORK DETAILS -->
+
+                <h3>4. Work Details</h3>
+
+                <label>Work Performed</label>
+
+                <textarea
+                    id="workPerformed"
+                    rows="4"
+                    placeholder="Describe the work performed..."
+                ></textarea>
+
+                <label>Findings / After-Service Condition</label>
+
+                <textarea
+                    id="findings"
+                    rows="4"
+                    placeholder="Describe inspection results and findings..."
+                ></textarea>
+
+                <label>Recommendations</label>
+
+                <textarea
+                    id="recommendations"
+                    rows="4"
+                    placeholder="Enter recommendations..."
+                ></textarea>
+
+                <hr>
+
+                <!-- PHOTOS -->
+
+                <h3>5. Photo Documentation</h3>
+
+                <label>Before Service Photos</label>
+
+                <input
+                    type="file"
+                    id="beforePhotos"
+                    accept="image/*"
+                    multiple
+                >
+
+                <label>After Service Photos</label>
+
+                <input
+                    type="file"
+                    id="afterPhotos"
+                    accept="image/*"
+                    multiple
+                >
+
+                <hr>
+
+                <!-- ACKNOWLEDGMENT -->
+
+                <h3>6. Acknowledgment</h3>
+
+                <label>Client Acknowledgment</label>
+
+                <input
+                    type="text"
+                    id="clientAcknowledgment"
+                    placeholder="Client name / acknowledgment"
+                >
+
+                <label>Technician Acknowledgment</label>
+
+                <input
+                    type="text"
+                    id="technicianAcknowledgment"
+                    placeholder="Technician name / acknowledgment"
+                >
+
+                <div class="button-group">
+
+                    <button type="submit" class="save-button">
+                        Save Service Report
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clearButton"
+                        class="clear-button">
+
+                        Clear Form
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="resultMessage"></p>
+
+        </section>
+
+        <!-- SAVED REPORTS -->
+
+        <section class="card">
+
+            <h2>Saved Service Reports</h2>
+
+            <button
+                type="button"
+                id="loadReportsButton"
+                class="load-button">
+
+                Load Reports
+
+            </button>
+
+            <div id="reportsContainer"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Bio-Free Pest Control Services</p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
