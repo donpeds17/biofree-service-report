@@ -1,0 +1,21 @@
+{
+  "name": "biofree-service-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donpeds17/biofree-service-report.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/donpeds17/biofree-service-report/issues"
+  },
+  "homepage": "https://github.com/donpeds17/biofree-service-report#readme"
+}
